@@ -7,25 +7,59 @@
 
     <body>
         <script>
-    console.log("Hello World!");
+
+console.log("Hello World!");
+
+    // Function GetComputerChoice 
 
     function getComputerChoice() {
-    return Math.floor(Math.random() * 10);
+        let x = Math.floor(Math.random() * 10);
+
+        if (x <= 2) {
+        return "Rock";
+        } else if (x >= 3 && x <=5) {
+        return "Paper";
+        } else if (x >=6) {
+        return "Scissor";
+        }
     }
 
-    let x = Math.floor(Math.random() * 10);
+console.log(getComputerChoice())
 
-if (x <= 2) {
-  console.log("Rock");
-} else if (x >= 3 && x <=5) {
-  console.log("Paper");
-} else if (x >=6) {
-  console.log("Scissor");
-}
 
-    function getHumanChoice () {
+    // Function GetHumanChoice 
+
+    function getHumanChoice() {
+        
+        let anwser = prompt("Rock, Paper or Scissor?", "Your choice");
+    
+        if (anwser === "Rock") {
+        console.log("Rock");
+        } else if (anwser === "Paper") {
+        console.log("Paper");
+        } else if (anwser === "Scissor") {
+        console.log("Scissor");
+        }
 
     }
+
+console.log(getHumanChoice());
+
+     
+    
+    // The Score 
+
+    let computerScore = 0;
+    let humanScore = 0;
+    
+
+    // The Game 
+
+    function playRound(humanChoice, computerChoice ) {
+
+    }
+
+    
 
         </script>   
 
