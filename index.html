@@ -8,9 +8,9 @@
     <body>
         <script>
 
-console.log("Hello World!");
+console.log("Rock, Paper, Scissor !");
 
-    // Function GetComputerChoice 
+// Function GetComputerChoice 
 
     function getComputerChoice() {
         let x = Math.floor(Math.random() * 10);
@@ -24,42 +24,42 @@ console.log("Hello World!");
         }
     }
 
-console.log(getComputerChoice())
+console.log("Computer" + " : " + getComputerChoice())
 
 
-    // Function GetHumanChoice 
+// Function GetHumanChoice 
 
     function getHumanChoice() {
         
         let anwser = prompt("Rock, Paper or Scissor?", "Your choice");
     
-        if (anwser === "Rock") {
-        console.log("Rock");
-        } else if (anwser === "Paper") {
-        console.log("Paper");
-        } else if (anwser === "Scissor") {
-        console.log("Scissor");
+        if (anwser.toLowerCase() === "rock") {
+        return "Rock";
+        } else if (anwser.toLowerCase() === "paper") {
+        return "Paper";
+        } else if (anwser.toLowerCase() === "scissor") {
+        return "Scissor";
         }
 
     }
 
-console.log(getHumanChoice());
+
+console.log("Player" + " : " + getHumanChoice());
 
      
     
-    // The Score 
+// The Score 
 
     let computerScore = 0;
     let humanScore = 0;
     
 
-    // The Game 
+// The Game 
 
-    function playRound(humanChoice, computerChoice ) {
+    function playRound(humanChoice, computerChoice) {}
 
-    }
 
-    
+    console.log(playRound())
 
         </script>   
 
