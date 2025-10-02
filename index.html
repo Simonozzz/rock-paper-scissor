@@ -24,8 +24,6 @@ console.log("Rock, Paper, Scissor !");
         }
     }
 
-console.log("Computer" + " : " + getComputerChoice())
-
 
 // Function GetHumanChoice 
 
@@ -43,9 +41,6 @@ console.log("Computer" + " : " + getComputerChoice())
 
     }
 
-
-console.log("Player" + " : " + getHumanChoice());
-
      
     
 // The Score 
@@ -54,21 +49,73 @@ console.log("Player" + " : " + getHumanChoice());
     let humanScore = 0;
     
 
+// Function PlayRound
+
+    function playRound(humanChoice, computerChoice) {
+
+    // draw
+        if (humanChoice === computerChoice) {
+        console.log("Draw ! You both chose " + humanChoice);
+        return;
+        }
+
+    // if player win
+        if (
+            (humanChoice === "Rock" && computerChoice === "Scissor") ||
+            (humanChoice === "Paper" && computerChoice === "Rock") ||
+            (humanChoice === "Scissor" && computerChoice === "Paper")
+        ) {
+            humanScore++;
+            console.log("You win! " + humanChoice + " beats " + computerChoice);
+        } else {
+            computerScore++;
+            console.log("You lose! " + computerChoice + " beats " + humanChoice);
+        }
+
+    console.log("Score : Player: " + humanScore + " | Computer: " + computerScore);
+}
+
+    // One round
+
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    console.log("Player : " + humanSelection);
+    console.log("Computer : " + computerSelection);
+
+playRound(humanSelection, computerSelection);
+
+
+// function Play Game
+
+function playGame() {
+  for (let i = 0; i < 5; i++) {
+    console.log("Round " + (i+1));
+    const humanSelection = getHumanChoice();
+    const computerSelection = getComputerChoice();
+
+    console.log("Player : " + humanSelection);
+    console.log("Computer : " + computerSelection);
+
+    playRound(humanSelection, computerSelection);
+  }
+
+  // Scoreboard
+  if (humanScore > computerScore) {
+    console.log("You won the game! 🎉");
+  } else if (computerScore > humanScore) {
+    console.log("Computer won the game! 🤖");
+  } else {
+    console.log("It's a tie overall!");
+  }
+}
+
 // The Game 
 
-    function playRound(humanChoice, computerChoice) {}
+playGame();
 
-
-    console.log(playRound())
 
         </script>   
-
-
-1 - GET a random number between 0 and 9 in the console <br>
-2 - IF number equal or smaller than 2 then SHOW Rock <br>
-3 - IF number is between 3 (includ) or 5 (includ) then SHOW Paper <br>
-4 - IF number greater or equal than 6 then SHOW Scissor <br>
-
 
 
 
